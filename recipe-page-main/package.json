@@ -1,0 +1,11 @@
+{
+  "name": "ruslanamrahov.github.io",
+  "version": "1.0.0",
+  "description": "fe-mentor task",
+  "main": "index.html",
+  "scripts": {
+    "sass-dev":"sass -w --no-source-map  ./scss:./css/"
+  },
+  "author": "Ru Am",
+  "license": "ISC"
+}

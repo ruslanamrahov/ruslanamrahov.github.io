@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-style: normal;
+  background-color: #F3E5D7;
+}
+
+.page {
+  margin: 12.3rem auto;
+  font-size: 1.6rem;
+  color: rgb(95, 86, 77);
+  padding: 4rem;
+  width: 73.6rem;
+  height: auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-rows: repeat(auto-fit);
+  row-gap: 3.2rem;
+}
+@media (max-width: 375px) {
+  .page {
+    width: 37.5rem;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .title, .ingridients, .instructions, .nutritions {
+    padding: 0 3.2rem 0 3.2rem;
+  }
+}
+
+.title--logo {
+  width: 65.6rem;
+  margin-bottom: 4rem;
+  border-radius: 12px;
+}
+@media (max-width: 375px) {
+  .title--logo {
+    width: 37.5rem;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+.header--text {
+  font-size: 4rem;
+  font-family: "Young Serif", serif;
+  margin-bottom: 2.4rem;
+  color: rgb(49, 46, 44);
+}
+@media (max-width: 375px) {
+  .header--text {
+    font-size: 3.6rem;
+  }
+}
+
+.preparation {
+  background-color: rgb(255, 247, 251);
+  font-size: 2rem;
+  padding: 2.8rem;
+}
+@media (max-width: 375px) {
+  .preparation {
+    padding: 2.4rem;
+  }
+}
+
+.prep-time {
+  color: rgb(122, 40, 78);
+}
+
+.list-item {
+  padding-left: 1.5rem;
+  line-height: 2.8rem;
+  margin-left: 1.5rem;
+}
+
+.prep--list {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  padding-left: 0.8rem;
+}
+
+.paragraph {
+  font-family: "Young Serif", serif;
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+  color: rgb(133, 70, 50);
+}
+
+.nutrition-table {
+  width: 100%;
+  margin-top: 2.4rem;
+  border-collapse: collapse;
+}
+
+.nutrition-table tr {
+  margin-left: 3rem;
+}
+
+.nutrition-table td {
+  padding: 1.5rem 0;
+}
+
+.nutrition-table tr:not(:last-child) {
+  border-bottom: 1px solid rgb(227, 221, 215);
+}
+
+.steps {
+  list-style-type: none;
+  counter-reset: list-counter;
+}
+
+.steps li {
+  counter-increment: list-counter;
+  margin-bottom: 1.6rem;
+  line-height: 150%;
+}
+
+ol li::before {
+  content: counter(list-counter) ".";
+  margin-right: 1.6rem;
+  font-weight: bold;
+  color: rgb(133, 70, 50);
+}

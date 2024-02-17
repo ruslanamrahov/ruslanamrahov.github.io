@@ -1,0 +1,150 @@
+@use './abstracts' as *;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: $font-main;
+    font-weight: 400;
+    // font-size: 1.6rem;
+    font-style: normal;
+    background-color: $color-background;
+}
+
+.page {
+    margin: 12.3rem auto;
+    font-size: 1.6rem;
+    color: $color-text-main;
+    padding: 4rem;
+    width: 73.6rem;
+    height: auto;
+    background-color: $color-background-page;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(auto-fit);
+    row-gap: 3.2rem;
+
+    @include for-phone {
+        width: 37.5rem;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+
+.title, .ingridients, .instructions, .nutritions{
+    @include for-phone {
+        padding: 0 3.2rem 0 3.2rem;
+        
+    }
+}
+
+
+.title--logo {
+    width: 65.6rem;
+    margin-bottom: 4rem;
+    border-radius: 12px;
+
+    @include for-phone {
+        width: 37.5rem;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+
+
+.header--text {
+    font-size: 4rem;
+    font-family: $font-sub;
+    margin-bottom: 2.4rem;
+    color: $color-text-header;
+
+    @include for-phone {
+        font-size: 3.6rem;
+    }
+}
+
+.preparation {
+    background-color: $color-background-prep;
+    font-size: 2rem;
+    padding: 2.8rem;
+    @include for-phone {
+        padding:2.4rem;
+    }
+}
+
+.prep-time {
+    color: $color-text-sub;
+}
+
+
+.list-item {
+    padding-left: 1.5rem;
+    line-height: 2.8rem;
+    margin-left: 1.5rem;
+}
+
+
+.prep--list {
+    font-size: 1.6rem;
+    margin: 1.6rem 0;
+    padding-left: 0.8rem;
+}
+
+.paragraph {
+    font-family: $font-sub;
+    font-size: 2.8rem;
+    margin-bottom: 2.4rem;
+    color: $color-text-chapters;
+}
+
+
+.nutrition-table {
+    width: 100%;
+    margin-top: 2.4rem;
+    border-collapse: collapse;
+    // border-spacing: 50px;
+}
+
+.nutrition-table tr {
+    margin-left: 3rem;
+}
+
+.nutrition-table td {
+    padding: 1.5rem 0;
+}
+
+.nutrition-table tr:not(:last-child) {
+    border-bottom: 1px solid rgb(227, 221, 215);
+
+
+}
+
+.steps {
+    list-style-type: none;
+    counter-reset: list-counter;
+}
+
+.steps li {
+    counter-increment: list-counter;
+    margin-bottom: 1.6rem;
+    line-height: 150%;
+}
+
+ol li::before {
+    content: counter(list-counter) ".";
+    margin-right: 1.6rem;
+    font-weight: bold;
+    color: $color-text-chapters;
+}

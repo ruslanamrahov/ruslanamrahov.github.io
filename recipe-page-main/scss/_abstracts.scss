@@ -1,0 +1,24 @@
+
+//Variables
+$font-main: "Outfit";
+$font-sub: "Young Serif", serif;
+$color-text-header: rgb(49, 46, 44);
+$color-text-main: rgb(95, 86, 77);
+$color-text-sub: rgb(122, 40, 78);
+$color-list-headings: rgb(133, 70, 50);
+$color-text-chapters: rgb(133, 70, 50);
+$color-background: #F3E5D7;
+$color-background-page: hsl(0, 0%, 100%);
+$color-background-prep: rgb(255, 247, 251);
+
+
+//media queries mixins
+@mixin for-phone {
+    @media (max-width:375px) {@content;}
+}
+
+@mixin for-pc {
+    @media (min-width:1440px) {
+        
+    }
+}
