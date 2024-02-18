@@ -1,0 +1,11 @@
+{
+  "name": "results-summary-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "sass-dev":"sass -w --no-source-map  ./scss:./css"
+  },
+  "author": "Ru Am",
+  "license": "ISC"
+}
